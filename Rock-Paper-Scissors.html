@@ -20,24 +20,80 @@
         
 
         function game() {
-             // possible values for playRound() are 
-             // human wins = 1, computer wins = 2, or tie = 3
-             const playerSelection = prompt("Choose player?");
-             const computerSelection = prompt("Choose Computer?");
 
-            if (playRound(playerSelection, computerSelection) == 1) {
-            roundScoreHuman += 1;
+            // Round 1
+            let playerSelection = prompt("Choose player?");
+            if (playerSelection == null || playerSelection == "") {
+                 alert("Please write Rock, Paper or Scissors");
+            } else {
+                playerSelection = playerSelection.toLowerCase().trim(); 
+                console.log(playerSelection);
+
+                let computerSelection = ((prompt("Choose Computer?")).toLowerCase()).trim();
+                console.log(playRound(playerSelection, computerSelection));
             }
-            else if (playRound(playerSelection, computerSelection) == 2) {
-            roundScoreComputer += 1;
+            
+            // Rounds 2
+            playerSelection = prompt("Choose player?");
+            if (playerSelection == null || playerSelection == "") {
+                 alert("Please write Rock, Paper or Scissors");
+            } else {
+                playerSelection = playerSelection.toLowerCase().trim(); 
+                console.log(playerSelection);
+
+                let computerSelection = ((prompt("Choose Computer?")).toLowerCase()).trim();
+                console.log(playRound(playerSelection, computerSelection));
             }
-            else {
-            roundScoreHuman += 1; 
-            roundScoreComputer += 1;
+
+            // Round 3
+            playerSelection = prompt("Choose player?");
+            if (playerSelection == null || playerSelection == "") {
+                 alert("Please write Rock, Paper or Scissors");
+            } else {
+                playerSelection = playerSelection.toLowerCase().trim(); 
+                console.log(playerSelection);
+
+                let computerSelection = ((prompt("Choose Computer?")).toLowerCase()).trim();
+                console.log(playRound(playerSelection, computerSelection));
             }
-            console.log(playerSelection);
-            console.log(computerSelection);
-            return console.log(roundScoreHuman, roundScoreComputer);
+
+            // Round 4
+            playerSelection = prompt("Choose player?");
+            if (playerSelection == null || playerSelection == "") {
+                 alert("Please write Rock, Paper or Scissors");
+            } else {
+                playerSelection = playerSelection.toLowerCase().trim(); 
+                console.log(playerSelection);
+
+                let computerSelection = ((prompt("Choose Computer?")).toLowerCase()).trim();
+                console.log(playRound(playerSelection, computerSelection));
+            }
+            
+            // Round 5
+            playerSelection = prompt("Choose player?");
+            if (playerSelection == null || playerSelection == "") {
+                 alert("Please write Rock, Paper or Scissors");
+            } else {
+                playerSelection = playerSelection.toLowerCase().trim(); 
+                console.log(playerSelection);
+
+                let computerSelection = ((prompt("Choose Computer?")).toLowerCase()).trim();
+                console.log(playRound(playerSelection, computerSelection));
+            }
+
+            // if (playRound(playerSelection, computerSelection) == 1) {
+            // roundScoreHuman += 1;
+            // }
+            // else if (playRound(playerSelection, computerSelection) == 2) {
+            // roundScoreComputer += 1;
+            // }
+            // else {
+            // roundScoreHuman += 1; 
+            // roundScoreComputer += 1;
+            // }
+            // console.log(playerSelection);
+            // console.log(computerSelection);
+            // return console.log(roundScoreHuman, roundScoreComputer);
         
             //return alert(gameResult);
 
@@ -45,60 +101,48 @@
             // gameResult shows the winner and the score, like "Human wins the game 5 - 1"
         }
         function playRound(playerSelection, computerSelection) {
-            // possible values for playerSelection and computerSelection are
-            //rock = 1, paper = 2; scissors = 3;
-            //left side of switch is human, right side computer
-
-            let playerSelectionStr = (playerSelection == 1)? "Rock" : (playerSelection == 2)? "Paper": "Scissors";
-			let computerSelectionStr = (computerSelection == 1)? "Rock" : (computerSelection == 2)? "Paper": "Scissors";
-
-            switch (playerSelectionStr + computerSelectionStr) {
-                // possible values for roundResult in each case
-                // are human wins = 1, computer wins = 2, or tie = 3
-            case "RockScissors":
-                roundResult = 1;
-                break;
-
-            case "PaperRock":
-                roundResult = 1;
-                break;
-
-            case "ScissorsPaper":
-                roundResult = 1;
-                break;
-
-            case "ScissorsRock":
-                roundResult = 2;
-                break;
-
-            case "RockPaper":
-                roundResult = 2;
-                break;
-        
-            case "PaperScissors":
-                roundResult = 2;
-                break;
-
-            default:
-                roundResult = 3;									
-            }
-           
-            return roundResult;
             
+            if (playerSelection == "rock" || playerSelection == "paper" || playerSelection == "scissors") {
+          
+                switch (playerSelection + computerSelection) {
+                //left side of case is human, right side computer    
+
+                case "rockscissors":
+                    roundResult = "You Win! Rock beats Scissors";
+                    break;
+
+                case "paperrock":
+                    roundResult = "You Win! Paper beats Rock";
+                    break;
+
+                case "scissorspaper":
+                    roundResult = "You Win! Scissors beat Paper";
+                    break;
+
+                case "scissorsrock":
+                    roundResult = "You Lose! Rock beats Scissors";
+                    break;
+
+                case "rockpaper":
+                    roundResult = "You Lose! Paper beats Rock";
+                    break;
+            
+                case "paperscissors":
+                    roundResult = "You Lose! Scissors beat Paper";
+                    break;
+
+                default:
+                    roundResult = "It's tie!";									
+                }
+            
+                return roundResult;
+                
+            }
+			else {
+				alert("Please write Paper, Rock or Scissors only")
+			}
         }
-        // 1st round
-        
-        game();  
-
-        // 2nd round
-        game();
-
-        // 3rd round to 4th round
-        game();
-
-        game();
-
-        game();
+       game()
         
 
 </script>
