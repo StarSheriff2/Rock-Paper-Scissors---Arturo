@@ -17,8 +17,6 @@
         let roundResult;
         let roundScoreHuman = 0;
         let roundScoreComputer = 0;
-        let playerSelection = prompt("Choose player?");
-        let computerSelection = prompt("Choose Computer?");
 
         function game() {
              // possible values for playRound() are 
@@ -84,9 +82,35 @@
             return roundResult;
             
         }
-        // repeat playRound function 5x
-            
-           
+        // 1st round
+        let playerSelection = prompt("Choose player?");
+        let computerSelection = prompt("Choose Computer?");   
+        playRound();
+        game();  
+
+        // 2nd round
+        playerSelection = prompt("Choose player?");
+        computerSelection = prompt("Choose Computer?");
+        playRound();
+        game();
+
+        // 3rd round to 4th round
+        playerSelection = prompt("Choose player?");
+        computerSelection = prompt("Choose Computer?");
+        playRound();
+        game();
+
+        playerSelection = prompt("Choose player?");
+        computerSelection = prompt("Choose Computer?");
+        playRound();
+        game();
+
+        playerSelection = prompt("Choose player?");
+        computerSelection = prompt("Choose Computer?");
+        playRound();
+        game();
+        
+
 </script>
 
 
