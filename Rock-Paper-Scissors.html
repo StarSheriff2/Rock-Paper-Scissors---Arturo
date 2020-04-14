@@ -17,14 +17,18 @@
         let roundResult;
         let roundScoreHuman = 0;
         let roundScoreComputer = 0;
+        
 
         function game() {
              // possible values for playRound() are 
              // human wins = 1, computer wins = 2, or tie = 3
-        if (playRound() == 1) {
+             const playerSelection = prompt("Choose player?");
+             const computerSelection = prompt("Choose Computer?");
+
+            if (playRound(playerSelection, computerSelection) == 1) {
             roundScoreHuman += 1;
             }
-            else if (playRound() == 2) {
+            else if (playRound(playerSelection, computerSelection) == 2) {
             roundScoreComputer += 1;
             }
             else {
@@ -35,12 +39,12 @@
             console.log(computerSelection);
             return console.log(roundScoreHuman, roundScoreComputer);
         
-        //return alert(gameResult);
+            //return alert(gameResult);
 
 
-        // gameResult shows the winner and the score, like "Human wins the game 5 - 1"
-    }
-        function playRound() {
+            // gameResult shows the winner and the score, like "Human wins the game 5 - 1"
+        }
+        function playRound(playerSelection, computerSelection) {
             // possible values for playerSelection and computerSelection are
             //rock = 1, paper = 2; scissors = 3;
             //left side of switch is human, right side computer
@@ -83,15 +87,10 @@
             
         }
         // 1st round
-        let playerSelection = prompt("Choose player?");
-        let computerSelection = prompt("Choose Computer?");   
-        playRound();
+        
         game();  
 
         // 2nd round
-        playerSelection = prompt("Choose player?");
-        computerSelection = prompt("Choose Computer?");
-        playRound();
         game();
 
         // 3rd round to 4th round
