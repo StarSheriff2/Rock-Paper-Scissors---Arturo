@@ -2,18 +2,84 @@
 <html>
 
 <script>
-    let humanPlay = prompt("Choose Rock, Paper or Scissors");
+    let humanPlay = prompt("Choose Rock, Paper or Scissors", "");
+    const roundScoreHuman = 0;
+    const roundScoreComputer = 0;
+    const humanID = 1;
+    const computerID = 2;
+    
+
     function computerPlay() {
      
     }
 
     function game() {
+        let roundResult;
+        let roundScoreHuman = 0;
+        let roundScoreComputer = 0;
         function playRound(playerSelection, computerSelection) {
-        console.log(matchResult);
-        return alert(matchResult);
+            // possible values for playerSelection and computerSelection are
+            //rock = 1, paper = 2; scissors = 3;
+            //left side of switch is human, right side computer
+
+            let playerSelectionStr = (playerSelection == 1)? "Rock" : (playerSelection == 2)? "Paper": "Scissors";
+			let computerSelectionStr = (computerSelection == 1)? "Rock" : (computerSelection == 2)? "Paper": "Scissors";
+
+            switch (playerSelectionStr + computerSelectionStr) {
+                // possible values for roundResult in each case
+                // are tie = 3, human wins = 1, or computer wins = 2
+            case "RockScissors":
+                roundResult = 1;
+                break;
+
+            case "PaperRock":
+                roundResult = 1;
+                break;
+
+            case "ScissorsPaper":
+                roundResult = 1;
+                break;
+
+            case "ScissorsRock":
+                roundResult = 2;
+                break;
+
+            case "RockPaper":
+                roundResult = 2;
+                break;
+        
+            case "PaperScissors":
+                roundResult = 2;
+                break;
+
+            default:
+                roundResult = 3;									
+            }
+            console.log(playerSelection);
+            console.log(computerSelection);
         }
         // repeat playRound function 5x
-        return alert(gameResult);
+        
+            
+            console.log(roundResult);
+
+            if (roundResult = 1) {
+            roundScoreHuman += 1;
+            }
+            else if (roundResult = 2) {
+            roundScoreComputer += 1;
+            }
+            else {
+            roundScoreHuman += 1; 
+            roundScoreComputer += 1;
+            }
+
+            console.log(roundScoreHuman, roundScoreComputer);
+        
+        //return alert(gameResult);
+
+
+        // gameResult shows the winner and the score, like "Human wins the game 5 - 1"
     }
 </script>
 
