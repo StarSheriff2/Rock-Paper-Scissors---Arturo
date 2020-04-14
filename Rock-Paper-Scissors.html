@@ -13,11 +13,36 @@
      
     }
 
-    function game() {
+    
         let roundResult;
         let roundScoreHuman = 0;
         let roundScoreComputer = 0;
-        function playRound(playerSelection, computerSelection) {
+        let playerSelection = prompt("Choose player?");
+        let computerSelection = prompt("Choose Computer?");
+
+        function game() {
+             // possible values for playRound() are 
+             // human wins = 1, computer wins = 2, or tie = 3
+        if (playRound() == 1) {
+            roundScoreHuman += 1;
+            }
+            else if (playRound() == 2) {
+            roundScoreComputer += 1;
+            }
+            else {
+            roundScoreHuman += 1; 
+            roundScoreComputer += 1;
+            }
+            console.log(playerSelection);
+            console.log(computerSelection);
+            return console.log(roundScoreHuman, roundScoreComputer);
+        
+        //return alert(gameResult);
+
+
+        // gameResult shows the winner and the score, like "Human wins the game 5 - 1"
+    }
+        function playRound() {
             // possible values for playerSelection and computerSelection are
             //rock = 1, paper = 2; scissors = 3;
             //left side of switch is human, right side computer
@@ -27,7 +52,7 @@
 
             switch (playerSelectionStr + computerSelectionStr) {
                 // possible values for roundResult in each case
-                // are tie = 3, human wins = 1, or computer wins = 2
+                // are human wins = 1, computer wins = 2, or tie = 3
             case "RockScissors":
                 roundResult = 1;
                 break;
@@ -55,32 +80,13 @@
             default:
                 roundResult = 3;									
             }
-            console.log(playerSelection);
-            console.log(computerSelection);
+           
+            return roundResult;
+            
         }
         // repeat playRound function 5x
-        
             
-            console.log(roundResult);
-
-            if (roundResult = 1) {
-            roundScoreHuman += 1;
-            }
-            else if (roundResult = 2) {
-            roundScoreComputer += 1;
-            }
-            else {
-            roundScoreHuman += 1; 
-            roundScoreComputer += 1;
-            }
-
-            console.log(roundScoreHuman, roundScoreComputer);
-        
-        //return alert(gameResult);
-
-
-        // gameResult shows the winner and the score, like "Human wins the game 5 - 1"
-    }
+           
 </script>
 
 
