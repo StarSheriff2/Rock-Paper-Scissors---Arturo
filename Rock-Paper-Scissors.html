@@ -2,25 +2,17 @@
 <html>
 
 <script>
-    let humanPlay = prompt("Choose Rock, Paper or Scissors", "");
-    const roundScoreHuman = 0;
-    const roundScoreComputer = 0;
-    const humanID = 1;
-    const computerID = 2;
-    
-
-        function computerPlay() {
-     
-        }
-
     
         let roundResult;
         let roundScoreHuman = 0;
         let roundScoreComputer = 0;
         let computerSelection;
+        game()
         
-
         function game() {
+            function computerPlay() {
+     
+            }
 
             // Round 1
             let playerSelection = prompt("Write Rock, Paper or Scissors");
@@ -105,12 +97,10 @@
             }
             
             return console.log(roundScoreHuman, roundScoreComputer);
-        
-            //return alert(gameResult);
-
 
             // gameResult shows the winner and the score, like "Human wins the game 5 - 1"
         }
+
         function playRound(playerSelection, computerSelection) {
             
             if (playerSelection == "rock" || playerSelection == "paper" || playerSelection == "scissors") {
@@ -151,7 +141,6 @@
 				alert("Please write Paper, Rock or Scissors only")
             }
         }
-       game()
         
 
 </script>
