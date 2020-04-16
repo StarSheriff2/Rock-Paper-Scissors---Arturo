@@ -11,71 +11,52 @@
 
         function game() {
 
-            let computerSelection = computerPlay(); 
+            let computerSelection;
+            let playerSelection;
 
-            // Round 1
-            let playerSelection = prompt("Write Rock, Paper or Scissors");
-            if (playerSelection == null || playerSelection == "") {
-                 alert("Please write Rock, Paper or Scissors");
-            } else {
-                playerSelection = playerSelection.toLowerCase().trim(); 
-                console.log(playerSelection);
+            // Round 1 
+                console.log(playerSelection = playerPlay());
                 console.log(computerSelection = computerPlay());
                 console.log(playRound(playerSelection, computerSelection));
                 gameScore();
-            }
             
             // Rounds 2
-            playerSelection = prompt("Write Rock, Paper or Scissors");
-            if (playerSelection == null || playerSelection == "") {
-                 alert("Please write Rock, Paper or Scissors");
-            } else {
-                playerSelection = playerSelection.toLowerCase().trim(); 
-                console.log(playerSelection);
+                console.log(playerSelection = playerPlay());
                 console.log(computerSelection = computerPlay());
                 console.log(playRound(playerSelection, computerSelection));
                 gameScore();
-            }
 
             // Round 3
-            playerSelection = prompt("Write Rock, Paper or Scissors");
-            if (playerSelection == null || playerSelection == "") {
-                 alert("Please write Rock, Paper or Scissors");
-            } else {
-                playerSelection = playerSelection.toLowerCase().trim(); 
-                console.log(playerSelection);
+                console.log(playerSelection = playerPlay());
                 console.log(computerSelection = computerPlay());
                 console.log(playRound(playerSelection, computerSelection));
                 gameScore();
-            }
 
             // Round 4
-            playerSelection = prompt("Write Rock, Paper or Scissors");
-            if (playerSelection == null || playerSelection == "") {
-                 alert("Please write Rock, Paper or Scissors");
-            } else {
-                playerSelection = playerSelection.toLowerCase().trim(); 
-                console.log(playerSelection);
+                console.log(playerSelection = playerPlay());
                 console.log(computerSelection = computerPlay());
                 console.log(playRound(playerSelection, computerSelection));
                 gameScore();
-            }
             
             // Round 5
-            playerSelection = prompt("Write Rock, Paper or Scissors");
-            if (playerSelection == null || playerSelection == "") {
-                 alert("Please write Rock, Paper or Scissors");
-            } else {
-                playerSelection = playerSelection.toLowerCase().trim(); 
-                console.log(playerSelection);
+                console.log(playerSelection = playerPlay());
                 console.log(computerSelection = computerPlay());
                 console.log(playRound(playerSelection, computerSelection));
                 gameScore();
-            }
             
             return console.log(roundScoreHuman, roundScoreComputer);
 
             // gameResult shows the winner and the score, like "Human wins the game 5 - 1"
+
+            function playerPlay() {
+                let playerInput = prompt("Write Rock, Paper or Scissors");
+                
+                if (playerInput == null || playerInput == "") {
+                    return "";
+                } else {
+                    return playerInput.toLowerCase().trim();
+                } 
+            }
 
             function computerPlay() {
                 let randomNumber = function() {
