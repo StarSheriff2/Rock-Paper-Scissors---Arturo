@@ -44,6 +44,8 @@
                 console.log(playRound(playerSelection, computerSelection));
                 gameScore();
             
+            // Game Result
+
             if (roundScoreHuman > roundScoreComputer) {
                 let gameResult = `You won the game ${roundScoreHuman} to ${roundScoreComputer}! Way to go!`;
                 console.log(gameResult);
@@ -61,8 +63,6 @@
                 alert(gameResult);
                 return gameResult;
             }
-
-            // gameResult shows the winner and the score, like "Human wins the game 5 - 1"
 
             function playerPlay() {
                 let playerInput = prompt("Write Rock, Paper or Scissors");
@@ -85,20 +85,20 @@
             }
             
             function gameScore() {
-            if (roundResult.search("You Win!") >= 0) {
-                roundScoreHuman += 1;        
-            }
-            else if (roundResult.search("You Lose!") >= 0) {
-                roundScoreComputer += 1;
-            }
-            else if (roundResult.search("It's a tie!") >= 0) {
-                roundScoreHuman += 1; 
-                roundScoreComputer += 1;
-            }
-            else {
-            roundScoreHuman += 0; 
-            roundScoreComputer += 0;
-            }
+                if (roundResult.search("You Win!") >= 0) {
+                    roundScoreHuman += 1;        
+                }
+                else if (roundResult.search("You Lose!") >= 0) {
+                    roundScoreComputer += 1;
+                }
+                else if (roundResult.search("It's a tie!") >= 0) {
+                    roundScoreHuman += 1; 
+                    roundScoreComputer += 1;
+                }
+                else {
+                    roundScoreHuman += 0; 
+                    roundScoreComputer += 0;
+                }
             }
         }
 
