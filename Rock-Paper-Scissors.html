@@ -6,13 +6,12 @@
         let roundResult;
         let roundScoreHuman = 0;
         let roundScoreComputer = 0;
-        let computerSelection;
-        game()
         
+        game()
+
         function game() {
-            function computerPlay() {
-     
-            }
+
+            let computerSelection = computerPlay(); 
 
             // Round 1
             let playerSelection = prompt("Write Rock, Paper or Scissors");
@@ -21,8 +20,7 @@
             } else {
                 playerSelection = playerSelection.toLowerCase().trim(); 
                 console.log(playerSelection);
-
-                let computerSelection = ((prompt("Choose Computer?")).toLowerCase()).trim();
+                console.log(computerSelection = computerPlay());
                 console.log(playRound(playerSelection, computerSelection));
                 gameScore();
             }
@@ -34,8 +32,7 @@
             } else {
                 playerSelection = playerSelection.toLowerCase().trim(); 
                 console.log(playerSelection);
-
-                let computerSelection = ((prompt("Choose Computer?")).toLowerCase()).trim();
+                console.log(computerSelection = computerPlay());
                 console.log(playRound(playerSelection, computerSelection));
                 gameScore();
             }
@@ -47,8 +44,7 @@
             } else {
                 playerSelection = playerSelection.toLowerCase().trim(); 
                 console.log(playerSelection);
-
-                let computerSelection = ((prompt("Choose Computer?")).toLowerCase()).trim();
+                console.log(computerSelection = computerPlay());
                 console.log(playRound(playerSelection, computerSelection));
                 gameScore();
             }
@@ -60,8 +56,7 @@
             } else {
                 playerSelection = playerSelection.toLowerCase().trim(); 
                 console.log(playerSelection);
-
-                let computerSelection = ((prompt("Choose Computer?")).toLowerCase()).trim();
+                console.log(computerSelection = computerPlay());
                 console.log(playRound(playerSelection, computerSelection));
                 gameScore();
             }
@@ -73,10 +68,23 @@
             } else {
                 playerSelection = playerSelection.toLowerCase().trim(); 
                 console.log(playerSelection);
-
-                let computerSelection = ((prompt("Choose Computer?")).toLowerCase()).trim();
+                console.log(computerSelection = computerPlay());
                 console.log(playRound(playerSelection, computerSelection));
                 gameScore();
+            }
+            
+            return console.log(roundScoreHuman, roundScoreComputer);
+
+            // gameResult shows the winner and the score, like "Human wins the game 5 - 1"
+
+            function computerPlay() {
+                let randomNumber = function() {
+                min = Math.ceil(1);
+                max = Math.floor(3);
+                return Math.floor(Math.random() * (max - min + 1)) + 1;
+                }
+                let result = (randomNumber() == 1)? "rock" : (randomNumber() == 2)? "paper" : "scissors";
+                return result;
             }
             
             function gameScore() {
@@ -95,10 +103,6 @@
             roundScoreComputer += 0;
             }
             }
-            
-            return console.log(roundScoreHuman, roundScoreComputer);
-
-            // gameResult shows the winner and the score, like "Human wins the game 5 - 1"
         }
 
         function playRound(playerSelection, computerSelection) {
@@ -139,6 +143,7 @@
             }
 			else {
 				alert("Please write Paper, Rock or Scissors only")
+                return roundResult = "Wrong input";
             }
         }
         
