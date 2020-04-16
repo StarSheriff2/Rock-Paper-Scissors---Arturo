@@ -44,7 +44,23 @@
                 console.log(playRound(playerSelection, computerSelection));
                 gameScore();
             
-            return console.log(roundScoreHuman, roundScoreComputer);
+            if (roundScoreHuman > roundScoreComputer) {
+                let gameResult = `You won the game ${roundScoreHuman} to ${roundScoreComputer}! Way to go!`;
+                console.log(gameResult);
+                alert(gameResult);
+                return gameResult;
+            } else if (roundScoreHuman < roundScoreComputer) {
+                let gameResult = `You lost the game ${roundScoreHuman} to ${roundScoreComputer}! Try again!`;
+                console.log(gameResult);
+                alert(gameResult);
+                return gameResult;
+            }
+            else {
+                let gameResult = "It's a tie game! Try again!";
+                console.log(gameResult);
+                alert(gameResult);
+                return gameResult;
+            }
 
             // gameResult shows the winner and the score, like "Human wins the game 5 - 1"
 
@@ -95,30 +111,37 @@
 
                 case "rockscissors":
                     roundResult = "You Win! Rock beats Scissors";
+                    alert(roundResult);
                     break;
 
                 case "paperrock":
                     roundResult = "You Win! Paper beats Rock";
+                    alert(roundResult);
                     break;
 
                 case "scissorspaper":
                     roundResult = "You Win! Scissors beat Paper";
+                    alert(roundResult);
                     break;
 
                 case "scissorsrock":
                     roundResult = "You Lose! Rock beats Scissors";
+                    alert(roundResult);
                     break;
 
                 case "rockpaper":
                     roundResult = "You Lose! Paper beats Rock";
+                    alert(roundResult);
                     break;
             
                 case "paperscissors":
                     roundResult = "You Lose! Scissors beat Paper";
+                    alert(roundResult);
                     break;
 
                 default:
-                    roundResult = "It's a tie!";									
+                    roundResult = "It's a tie!";
+                    alert(roundResult);									
                 }
                 return roundResult;
             }
