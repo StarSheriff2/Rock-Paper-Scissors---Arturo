@@ -110,8 +110,12 @@
 
         function playRound(playerSelection, computerSelection) {
             
-            if (playerSelection == "rock" || playerSelection == "paper" || playerSelection == "scissors") {
-          
+            if (playerSelection !== "rock" && playerSelection !== "paper" && playerSelection !== "scissors") {
+                alert("Please write Paper, Rock or Scissors only")
+                return roundResult = "Wrong input";
+            }
+
+			else {
                 switch (playerSelection + computerSelection) {
                 //left side of case is human, right side computer    
 
@@ -150,10 +154,6 @@
                     alert(roundResult);									
                 }
                 return roundResult;
-            }
-			else {
-				alert("Please write Paper, Rock or Scissors only")
-                return roundResult = "Wrong input";
             }
         }
         
