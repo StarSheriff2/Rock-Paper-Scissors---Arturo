@@ -479,6 +479,10 @@ header {
         font-size: 0;
     }
 
+    #weaponSelection {
+        height: 115px;
+    }
+
     #weaponSelection div {
         height: 100px;
         width: 100px;        
