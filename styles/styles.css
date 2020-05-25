@@ -480,7 +480,8 @@ header {
     }
 
     #weaponSelection {
-        height: 115px;
+        height: 70px;
+        margin-bottom: 20px;
     }
 
     #weaponSelection div {
@@ -495,6 +496,10 @@ header {
         left: 50%;
         margin-top: 50%;
         transform: translate(-50%,-50%);
+    }
+
+    h2 {
+        font-size: 1.5em;
     }
 
     #roundSelection {
