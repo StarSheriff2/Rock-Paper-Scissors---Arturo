@@ -8,12 +8,12 @@
     </head>
 
 <body>
-    <div id="container">
+    <div id="gameContainer">
         <div id="topDiv">
             <header>Rock Paper Scissors</header>
-            <h2 id="scoreH2">Score</h2>
             <div id="gameScore">
                 <div id="playerScore">0<span id="playerLabel">Player</span></div>
+                <h2 id="scoreH2">Score</h2>
                 <div id="computerScore">0<span id="computerLabel">Computer</span></div>
             </div>
         </div>
@@ -28,14 +28,33 @@
         <div id="bottomDiv">
             <h2 id="roundH2">Round</h2>
             <div id="roundSelection">
-                <div id="playerSelection"><img class="roundImg" src="images/Rock Icon.png"></div>
+                <div id="playerSelection"><img class="roundImg" src="images/480px-Question_mark_white_icon.svg.png"></div>
                 <div id="roundResult"></div>
-                <div id="computerSelection"><img class="roundImg" src="images/Rock Icon.png"></div>
+                <div id="computerSelection"><img class="roundImg" src="images/480px-Question_mark_white_icon.svg.png"></div>
             </div>
         </div>
+        <div class="imgAttribution"><a href="https://www.vecteezy.com/free-vector/rock-paper-scissors">Rock Paper Scissors Vectors by Vecteezy</a></div>
     </div>
-    <span id="imgAttribution"><a href="https://www.vecteezy.com/free-vector/rock-paper-scissors">Rock Paper Scissors Vectors by Vecteezy</a></span>
 
+    <div id="resultsContainer">
+        <div id="gameResultDiv">
+            <header id="gameResultH2">You Won!</header>
+            <div id="playAgain"><button id="playAgainBtn">Play Again</button></div>
+        </div>
+        <div id="gameSummaryDiv">
+            <h2 id="summaryH2">Game Summary</h2>
+            <div id="roundsSummary">
+                <div id="summaryTitles">
+                    <div class="titlesSummary">You</div>
+                    <div class="titlesSummary" id="roundTitle">Round</div>
+                    <div class="titlesSummary">Computer</div>
+                </div>
+                <div id="summaryData"></div>
+            </div>
+            
+        </div>
+        <div class="imgAttribution2"><a href="https://www.freepik.com/free-photos-vectors/business">Business vector created by rawpixel.com - www.freepik.com</a></div>
+    </div>
     
     <script src="js/rps.js" defer></script>
 </body>

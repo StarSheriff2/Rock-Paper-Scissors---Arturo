@@ -1,8 +1,22 @@
-/* images:
-1- https://www.vecteezy.com/vector-art/690792-rock-paper-scissors-hand-icons
-*/
+@font-face { 
+    font-family: 'Score Board';
+    src: url("scoreboard-webfont.woff");
+    src: url("scoreboard-webfont.woff2"); 
+}
+
+@font-face {
+    font-family: "BebasNeue";
+    src: url("BebasNeue-Bold.otf") format("opentype");
+    src: url("BebasNeue-Bold.ttf") format("truetype");
+}
+
 body {
     font: 1em 'Balsamiq Sans', cursive, Arial, sans-serif;
+    margin: 0;
+}
+
+#gameContainer {
+    padding: 0;
 }
 
 h2 {
@@ -12,127 +26,502 @@ h2 {
 }
 
 #topDiv {
-    height: 200px;
-    border-color: black;
-    border-style: solid;
+    height: 180px;
     text-align: center;
+    background-color: #b700ff;
+    padding-top: 20px;
 }
 
 header {
     text-align: center;
-    font-size: 200%;
-}
+    font-size: 40px;
+    margin: 0;
+    color: #c8ff00;
+    margin-bottom: 20px;
+    font-family: "BebasNeue", cursive, Arial, sans-serif;
+    letter-spacing: 3px;
+    word-spacing: 6px;
+}   
 
 #gameScore {
-    border: black 2px solid;
-    background-color: orange;
     height: 90px;
     position: relative;
+    width: 800px;
+    margin: 0 auto;
 }
 
 #playerScore, #computerScore {
-    background: gray;
+    background-color: black;
+    color: #ec1b24;
     font-size: 4em;
     height: 80px;
     width: 80px;
-    line-height: 85px;
+    line-height: 80px;
     position: absolute;
     top: 50%;
     margin-top: -40px;
+    font-family: 'Score Board';
+}
+
+#scoreH2 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 50%;
+    margin-top: -40px;
+    height: 80px;
+    line-height: 80px;
+    width: 100px;
+    color: #c8ff00;
+    font-family: "BebasNeue", cursive, Arial, sans-serif;
+    letter-spacing: 3px;
+    word-spacing: 6px;
 }
 
 #playerScore {
-    left: 450px;
+    left: 200px;
 }
 
 #computerScore {
-    right: 450px;
+    right: 200px;
+}
+
+#playerLabel, #computerLabel {
+    position: absolute;
+    font-size: 55px;
+    font-family: "BebasNeue", cursive, Arial, sans-serif;
+    color: #c8ff00;
+    letter-spacing: 3px;
+    word-spacing: 6px;
+    height: 64px;
+    top: 50%;
+    margin-top: -32px;
 }
 
 #playerLabel {
-    position: absolute;
     right: 120px;
-    font-size: 50px;
-    top: 50%;
-    transform: translateY(-50%);
 }
 
 #computerLabel {
-    position: absolute;
-    left: 120px;  
-    font-size: 50px;
-    top: 50%;
-    transform: translateY(-50%);
+    left: 120px;
 }
 
 #mainDiv {
-    height: 250px;
-    border-color: black;
-    border-style: solid;
+    height: auto;
     text-align: center;
+    padding-top: 10px;
 }
 
 #weaponH2 {
     line-height: 20px;
     height: 20px;
+    padding-bottom: 10px;
+    color: #b700ff;
+    font-family: "BebasNeue", cursive, Arial, sans-serif;
+    letter-spacing: 3px;
+    word-spacing: 6px;
 }
 
 #weaponSelection {
     display: flex;
-    border: pink 0.25em solid;
     height: 180px;
     justify-content: space-evenly;
     align-items: center;
-    background-color: #27006a;
 }
 
 #weaponSelection div {
-    border: yellow 0.10em solid;
-    height: 100%;
-    width: 200px;
+    border-radius: 50%;
+    height: 170px;
+    width: 170px;
+    background-color: #27006a;
+    position: relative;
+    transition: all 0.05s ease;
+}
+
+#weaponSelection div:hover {
+    border-color: #c8ff00;
+    box-sizing: border-box; 
+    border-style: solid;
+    border-width: 5px;
+    cursor: pointer;
+}
+
+.weaponClick {
+    transition-duration: 0.25s;
+    transform: scale(1.1);
+    border-color: #c8ff00;
+    box-shadow: 2px 5px 1rem #c8ff00;
 }
 
 .weaponImg {
     width: auto;
-    height: 100%;
-    vertical-align: middle;   
+    height: 140px;
+    position: absolute;
+    left: 50%;
+    margin-top: 50%;
+    transform: translate(-50%,-50%);
 }
 
 #bottomDiv {
-    height: 180px;
-    border-color: blue;
-    border-style: solid;
     text-align: center;
+    padding-top: 10px;
+}
+
+#roundH2 {
+    color: #b700ff;
+    font-family: "BebasNeue", cursive, Arial, sans-serif;
+    letter-spacing: 3px;
+    word-spacing: 6px;
 }
 
 #roundSelection {
     display: flex;
-    border: fuchsia 0.25em solid;
     height: 110px;
     justify-content: center;
     align-items: center;
+    background-color: #c8ff00;
+    width: 485px;
+    border-radius: 75px;
+    margin: 0 auto;
+    position: relative;
 }
 
 #playerSelection, #computerSelection {
-    border: yellow 0.50em solid;
-    width: 150px;
-    height: 100%;
+    width: 100px;
+    height: 100px;
     background-color: #27006a;
+    border-radius: 50px;
+    position: absolute;
+}
+
+#playerSelection {
+    left: 8.5px;
+}
+
+#computerSelection {
+    right: 8.5px;
 }
 
 .roundImg {
     width: auto;
-    height: 100%;
-    vertical-align: middle; 
+    height: 80px;
+    position: absolute;
+    top: 50%;
+    margin-top: -40px;
+    transform: translateX(-50%);
 }
 
 #roundResult {
-    width: 20%;
+    width: 180px;
     height: auto;
     vertical-align: middle; 
-    font-size: 3em;
+    font-size: 40px;
+    color: #b700ff;
+    font-family: "BebasNeue", cursive, Arial, sans-serif;
+    letter-spacing: 3px;
+    word-spacing: 6px;
 }
 
-#imgAttribution {
-    font-size: small;
+.imgAttribution, .imgAttribution2 {
+    position: relative;
+    height: 20px;
+}
+
+.imgAttribution a, .imgAttribution2 a {
+    font-size: 10px;
+    position: absolute;
+    bottom: 5px;
+}
+
+#gameResultDiv {
+    height: auto;
+    text-align: center;
+}
+
+#gameResultH2 {
+    font-size: 5em;
+    padding: 30px;
+    width: 350px;
+    margin: 0 auto;
+    font-family: "BebasNeue", cursive, Arial, sans-serif;
+    letter-spacing: 3px;
+    word-spacing: 6px;
+    color: #b700ff;
+}
+
+#trophyDiv {
+    height: auto;
+    width: auto;
+}
+
+#trophyImg {
+    width: 220px;
+    height: auto;
+    vertical-align: middle;   
+}
+
+#playAgain {
+    vertical-align: middle;   
+}
+
+#playAgainBtn {
+    width: 180px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 75px;
+    display: block;
+    margin: auto;
+    font-size: 24px;
+    background-color: #c8ff00;
+    font-family: "BebasNeue", cursive, Arial, sans-serif;
+    letter-spacing: 3px;
+    word-spacing: 6px;
+    color: #b700ff;
+}
+
+#playAgainBtn:hover {
+    cursor: pointer;
+    box-sizing: border-box;
+    border-style: solid;
+    border-color: #bee62e;
+    box-shadow: 0px 0px 10px rgba(200, 255, 0, 0.336);
+}
+
+#gameSummaryDiv {
+    text-align: center;
+}
+
+#summaryH2 {
+    margin: 50px;
+    font-family: "BebasNeue", cursive, Arial, sans-serif;
+    letter-spacing: 3px;
+    word-spacing: 6px;
+    color: #b700ff;
+}
+
+#summaryTitles {
+    display: flex;
+    justify-content: center;
+}
+
+.titlesSummary {
+    font-size: 25px;
+    width: 150px;
+    margin: 0 60px;
+    font-family: "BebasNeue", cursive, Arial, sans-serif;
+    letter-spacing: 3px;
+    word-spacing: 6px;
+    color: #b700ff;
+}
+
+.playerRound {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.playerRound h2 {   
+    width: 150px;
+    font-family: "BebasNeue", cursive, Arial, sans-serif;
+    letter-spacing: 3px;
+    word-spacing: 6px;
+    color: #b700ff;
+}
+
+.summaryPlayer, .summaryComputer {
+    margin: 15px 120px;
+    width: 150px;
+    position: relative;
+}
+
+.playerRound div {
+    position: relative;
+}
+
+.roundImgContainer {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #27006a;
+    margin: 0 auto;
+}
+
+.roundImgPlayer, .roundImgComputer {
+    width: 55px;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.winnerMarkPlayer, .winnerMarkComputer {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.winnerMarkPlayer {
+    right: 180px;
+    height: 80px !important;
+    width: auto !important;
+}
+
+.winnerMarkComputer {
+    left: 180px;
+    height: 80px !important;
+    width: auto !important;
+}
+
+@media (max-width: 910px) {
+    #playerLabel, #computerLabel {
+        font-size: 0;
+    }
+
+    #playerScore {
+        left: 25vw;
+    }
+    
+    #computerScore {
+        right: 25vw;
+    }
+
+    #gameScore {
+        width: 100%;
+    }
+
+    #scoreH2 {
+        font-size: 0;
+    }
+    
+    #playerScore, #computerScore {
+        font-size: 5em;
+        height: 100px;
+        width: 100px;
+        line-height: 100px;
+        margin-top: -50px;
+    }
+
+    #weaponSelection div {
+        height: 130px;
+        width: 130px;        
+    }
+
+    .weaponImg {
+        width: auto;
+        height: 100px;
+        position: absolute;
+        left: 50%;
+        margin-top: 50%;
+        transform: translate(-50%,-50%);
+    }
+
+    #roundSelection {
+        width: 400px;
+    }
+
+    #roundResult {
+        font-size: 30px;
+    }
+
+    .summaryPlayer, .summaryComputer {
+        margin: 15px 0;
+    }
+
+    .titlesSummary {
+        margin: 0;
+    }
+
+    .playerRound h2 {
+        font-size: 0;
+        width: 0;
+    }
+
+    #roundTitle {
+        font-size: 0;
+        width: 0;
+    }
+
+    .roundImgContainer {
+        width: 100px;
+        height: 100px;
+    }
+
+    .roundImgPlayer, .roundImgComputer {
+        width: 45px;
+    }
+
+    .winnerMarkPlayer {
+        right: 150px;
+        height: 60px !important;
+    }
+    
+    .winnerMarkComputer {
+        left: 150px;
+        height: 60px !important;
+    }
+}
+
+@media (max-width: 360px) {
+    #playerLabel, #computerLabel {
+        font-size: 0;
+    }
+
+    #playerScore {
+        left: 15vw;
+    }
+    
+    #computerScore {
+        right: 15vw;
+    }
+
+    #scoreH2 {
+        font-size: 0;
+    }
+
+    #weaponSelection div {
+        height: 100px;
+        width: 100px;        
+    }
+
+    .weaponImg {
+        width: auto;
+        height: 80px;
+        position: absolute;
+        left: 50%;
+        margin-top: 50%;
+        transform: translate(-50%,-50%);
+    }
+
+    #roundSelection {
+        width: 300px;
+    }
+
+    #roundResult {
+        font-size: 15px;
+        width: 55px;
+    }
+
+    #gameResultH2 {
+        width: 270px;
+    }
+
+    .roundImgContainer {
+        width: 75px;
+        height: 75px;
+    }
+
+    .roundImgPlayer, .roundImgComputer {
+        width: 30px;
+    }
+
+    .winnerMarkPlayer {
+        right: 125px;
+        height: 45px !important;
+    }
+    
+    .winnerMarkComputer {
+        left: 125px;
+        height: 45px !important;
+    }
 }
