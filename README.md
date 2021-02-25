@@ -30,7 +30,7 @@ To get a local copy up and running follow these simple example steps.
 
 1. To run the program, go to the projects's root directory (the directory where you cloned the remote repository or extracted the project files) and open the **index.html file**. This will open the game in your default browser.
 2. To play the game, you simply need to click on the *weapon* of your choice.
-3.  In this game, you play against the computer. The first player to reach a score of 5 wins the the game.
+3.  In this game, you play against the computer. The first player to reach a score of 5 points wins the game.
 4.  Once the game has ended, another page will load the game results, with details for each round.
 
 ## Author
