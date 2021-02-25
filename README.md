@@ -53,4 +53,4 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License
 
-This project is [MIT](https://github.com/StarSheriff2/md-cleaner-ruby-capstone/blob/basic-features/LICENSE) licensed.
+This project is [MIT](https://github.com/StarSheriff2/Rock-Paper-Scissors---Arturo/blob/master/LICENSE) licensed.
