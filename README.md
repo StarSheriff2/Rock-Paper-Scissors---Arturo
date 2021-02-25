@@ -2,7 +2,7 @@
 
 >This is the popular Rock, Paper Scissors game. It was built entirely with JS, HTML and CSS. This is part of the Web Development 101 | Odin Project
 
-![screenshot](./assets/app_screenshot.png)
+![screenshot](./app_screenshot.png)
 
 In this project I built an interactive Rock, Paper Scissors game. The project was built from scratch using Javascript, HTML and SCSS. The page can be loaded in small screens too.
 
